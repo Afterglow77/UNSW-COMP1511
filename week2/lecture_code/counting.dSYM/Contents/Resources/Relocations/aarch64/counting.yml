@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Volumes/Study/code/C/UNSW-COMP1511/week2/lecture_code/counting'
+relocations:     []
+...
