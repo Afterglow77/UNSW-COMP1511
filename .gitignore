@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+
+# C build outputs
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+*.out
+*.exe
+a.out
+build/
+*.dSYM/
+
+# Common local executable names created by compiling a single C file.
+# Keep source files tracked; rebuild these locally when needed.
+bad_pun
+variables
+counting
+control_flow
+chars
+
+# Editor/project local files
+.vscode/
+.idea/
