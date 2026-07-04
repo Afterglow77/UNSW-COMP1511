@@ -9,8 +9,7 @@ int main(void) {
 
     if (age <= 0) {
         printf("That is invalid!\n");
-    }
-    else{
+    } else {
 
         if (age < MAIN_AGE) {
         printf("You are too young\n");
