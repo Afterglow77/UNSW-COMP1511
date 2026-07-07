@@ -15,8 +15,8 @@ int main(void) {
     printf("Please enter target letter: ");
     scanf(" %c", &target_letter);
 
-    //sld means start letter lenth with 'A'
-    //tld means target_letter lenth with 'A'
+    //sld means start letter length with 'A'
+    //tld means target_letter length with 'A'
     char base = 'A'; 
     if (starting_letter >= 'a') {
         base = 'a';
@@ -52,7 +52,7 @@ int main(void) {
         }
     } else {
         ccwn = sld - tld;
-        cwn = 26- ccwn;
+        cwn = 26 - ccwn;
         if (cwn <= ccwn) {
 
             int count = 0;
@@ -71,5 +71,4 @@ int main(void) {
     }
 
     return 0;
-    }
-    
+}
