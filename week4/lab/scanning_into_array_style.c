@@ -9,17 +9,24 @@ void print_array_minmax(int length, int numbers[MAX_SIZE]);
 int main(void) {
     // TODO: Create an integer array of size MAX_SIZE
     // HINT: Do not use the user input as the length of the array!
+    int numbers[MAX_SIZE];
 
     printf("How many numbers: ");
     // TODO: Fill in code that takes the quantity of numbers from the user
+    int length;
+    scanf("%d", &length);
 
     printf("Please enter numbers: ");
     // TODO: Fill in code that scans in integers from the user
-    
-    print_array_minmax(, );
+    int i = 0;
+    while (i < length) {
+        scanf("%d", &numbers[i]);
+        i++;
+    }
+
+    print_array_minmax(length, numbers);
     // TODO: Change this statement to match your variables and array.
     //      Refer to the documentation below for correct usage!
-
     return 0;
 }
 
