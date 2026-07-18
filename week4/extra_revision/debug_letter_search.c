@@ -3,7 +3,7 @@
 // Write a C program that takes in a letter from the user, and then searches 
 // more input given by the user for that letter, or until CTRL+D is entered.
 //
-// This program was written by YOUR-NAME-HERE (zXXXXXXX)
+// This program was written by Rhys Yang (zXXXXXXX)
 // on INSERT-DATE-HERE
 
 #include <stdio.h>
@@ -29,9 +29,9 @@ int main(void) {
 
     // Tell the user if we found it or not
     if (found == TRUE) {
-        printf("We found %d!!!\n", target);
+        printf("We found %c!!!\n", target);
     } else {
-        printf("The mission was not successful :(");
+        printf("The mission was not successful :(\n");
     }
 
     return 0;
