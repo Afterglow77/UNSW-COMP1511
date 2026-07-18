@@ -29,8 +29,8 @@ enum major {
 
 struct student {
     int z_id;
-    int major;
-    int degree_type;
+    enum major;
+    enum degree_type;
     double assignments_mark;
     double exam_mark;
     double course_grade;
