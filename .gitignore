@@ -1,5 +1,11 @@
 # macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
 
 # C build outputs
 *.o
@@ -9,18 +15,32 @@
 *.dll
 *.out
 *.exe
+*.bin
 a.out
 build/
 *.dSYM/
 
-# Common local executable names created by compiling a single C file.
-# Keep source files tracked; rebuild these locally when needed.
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Misc local junk
+tempCodeRunnerFile
+tempCodeRunnerFile.*
+*.code-workspace
+
+# Common local executable names created by compiling a single C file
+# (no extension). Keep source files tracked; rebuild locally when needed.
 bad_pun
 variables
 counting
 control_flow
 chars
-
-# Editor/project local files
-.vscode/
-.idea/
+addition
+get_letter
+negative
+program
+program1
