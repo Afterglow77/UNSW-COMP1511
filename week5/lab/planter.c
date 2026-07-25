@@ -37,15 +37,41 @@ int main(void) {
 
     printf("Welcome to the planter!\n");
     // TODO SECOND: IMPLEMENT THE MAIN FUNCTION
+    struct garden garden[GARDEN_ROWS][GARDEN_COLS] = {0};
+    int i = 0;
+    int choice = 0;
+    while (i < GARDEN_ROWS) {
+        garden[i][0].is_gardener = TRUE;
+        print_garden(garden);
 
-    // Provided printf statements to help you get started
-    printf(
-        "0. Nothing\n"
-        "1. Daisy\n"
-        "2. Rose\n"
-        "3. Tulip\n"
-        "Which flower would you like to plant in this row? "
-    );
+        printf(
+            "0. Nothing\n"
+            "1. Daisy\n"
+            "2. Rose\n"
+            "3. Tulip\n"
+            "Which flower would you like to plant in this row? "
+        );
+        scanf("%d", &choice);
+
+        grow_garden(garden);
+
+        if (choice != 0) {
+            int j = 0;
+            while (j < GARDEN_COLS) {
+                garden[i][j].flower = choice;
+                garden[i][j].bloom_countdown = 3;
+                j++;
+            }
+        }
+        garden[i][0].is_gardener = FALSE;
+        i++;
+    }
+
+    print_garden(garden);
+    while (grow_garden(garden)) {
+        printf("Waiting for flowers to bloom...\n");
+        print_garden(garden);
+    }
     return 0;
 }
 
@@ -58,7 +84,21 @@ int main(void) {
 */
 int grow_garden(struct garden garden[GARDEN_ROWS][GARDEN_COLS]) {
     // TODO FIRST: decrease bloom_countdown for all flowers in the garden
-    return FALSE;
+    int flower_found = FALSE;
+    int i = 0;
+    while (i < GARDEN_ROWS) {
+
+        int j = 0;
+        while (j < GARDEN_COLS) {
+            if (garden[i][j].bloom_countdown > 0) {
+                garden[i][j].bloom_countdown -= 1;
+                flower_found = TRUE;
+            }
+            j++;
+        }
+        i++;
+    }
+    return flower_found;
 }
 
 
