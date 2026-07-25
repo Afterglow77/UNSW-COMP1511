@@ -24,7 +24,46 @@ int main(void) {
 
     printf("Welcome to Snake!\n");
 
-    // TODO: Complete the program
+    // Place the apple
+    int apple_row;
+    int apple_col;
+    printf("Please enter apple location: ");
+    scanf("%d %d", &apple_row, &apple_col);
+    map[apple_row][apple_col] = APPLE;
+
+    // Place the snake and print the starting map
+    int snake_row;
+    int snake_col;
+    printf("Please enter snake location: ");
+    scanf("%d %d", &snake_row, &snake_col);
+    map[snake_row][snake_col] = SNAKE;
+    print_map(map);
+
+    // Move until the snake reaches the apple
+    while (snake_row != apple_row || snake_col != apple_col) {
+        char direction;
+        scanf(" %c", &direction);
+
+        // Mark old tile as visited
+        map[snake_row][snake_col] = VISITED;
+
+        // Update snake coordinates
+        if (direction == 'u') {
+            snake_row--;
+        } else if (direction == 'd') {
+            snake_row++;
+        } else if (direction == 'l') {
+            snake_col--;
+        } else if (direction == 'r') {
+            snake_col++;
+        }
+
+        // Mark new tile as snake
+        map[snake_row][snake_col] = SNAKE;
+        print_map(map);
+    }
+
+    printf("Chomp!\n");
 
     return 0;
 }
