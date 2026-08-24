@@ -2,12 +2,14 @@
 
 int main(void) {
 
-    int i = 50;
+    int age = 50;
 
-    printf("i is: %d\n", i );
-    printf("i is stored at: %p\n", &i);
+    printf("age is: %d\n", age );
+    printf("age is stored at: %p\n", &age);
 
+    int *age_ptr = &age;
 
+    printf("%d\n", *age_ptr);
 
 
     return 0;
