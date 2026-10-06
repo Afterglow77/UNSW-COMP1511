@@ -34,7 +34,12 @@ int main(void) {
 // print a linked list in this format:
 // 17 -> 34 -> 51 -> 68 -> X
 void print(struct node *head) {
-
+    struct node *current = head;
+    while (current != NULL) {
+        printf("%d -> ", current->data);
+        current = current->next;
+    }
+    printf("X\n");
     // PUT YOUR CODE HERE
 }
 
