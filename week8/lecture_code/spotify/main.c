@@ -15,19 +15,19 @@ int main(void) {
     add_playlist("Chill Vibes", spotify);
 
     // // Add songs to the favourites playlist
-    add_song("COMP(1511|1911)'s Favourites", "Touch", KPOP, "Katseye", 129);
-    add_song("COMP(1511|1911)'s Favourites", "Ms Jackon", HIPHOP, "Outkast", 299);
-    add_song("COMP(1511|1911)'s Favourites", "Love Story", POP, "Taylor Swift", 230);
-    add_song("COMP(1511|1911)'s Favourites", "Golden", KPOP, "HUNTR/X", 180);
+    add_song("COMP(1511|1911)'s Favourites", "Touch", KPOP, "Katseye", 129, spotify);
+    add_song("COMP(1511|1911)'s Favourites", "Ms Jackon", HIPHOP, "Outkast", 299, spotify);
+    add_song("COMP(1511|1911)'s Favourites", "Love Story", POP, "Taylor Swift", 230, spotify);
+    add_song("COMP(1511|1911)'s Favourites", "Golden", KPOP, "HUNTR/X", 180, spotify);
 
     // Add songs to the K-Pop playlist
-    add_song("K-Pop Hits", "Dynamite", KPOP, "BTS", 199);
-    add_song("K-Pop Hits", "Pink Venom", KPOP, "BLACKPINK", 195);
-    add_song("K-Pop Hits", "Touch", KPOP, "Katseye", 129);
+    add_song("K-Pop Hits", "Dynamite", KPOP, "BTS", 199, spotify);
+    add_song("K-Pop Hits", "Pink Venom", KPOP, "BLACKPINK", 195, spotify);
+    add_song("K-Pop Hits", "Touch", KPOP, "Katseye", 129, spotify);
 
     // Add songs to the chill playlist
-    add_song("Chill Vibes", "Kyoto", INDIE, "Phoebe Bridgers", 242);
-    add_song("Chill Vibes", "Good Days", HIPHOP, "SZA", 260);
+    add_song("Chill Vibes", "Kyoto", INDIE, "Phoebe Bridgers", 242, spotify);
+    add_song("Chill Vibes", "Good Days", HIPHOP, "SZA", 260, spotify);
 
     print_spotify(spotify);
 

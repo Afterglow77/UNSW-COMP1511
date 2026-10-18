@@ -70,7 +70,7 @@ struct node *insert_nth(int n, int value, struct node *head) {
     new_node->next = current->next;
     current->next = new_node;
     // PUT YOUR CODE HERE! CHANGE THE NEXT LINES!
-    return new_node;
+    return head;
 }
 
 

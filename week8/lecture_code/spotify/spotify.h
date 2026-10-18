@@ -64,7 +64,7 @@ void add_playlist(char *name, struct spotify *spotify);
 struct song *create_song(char *name, enum genre genre, char *artist, int duration);
 
 // Adds a new song to the specified playlist
-void add_song(char *playlist_name, char *name, enum genre genre, char *artist, int duration);
+void add_song(char *playlist_name, char *name, enum genre genre, char *artist, int duration, struct spotify *spotify);
 
 // Prints out the entire spotify system (all playlists)
 void print_spotify(struct spotify *spotify);
@@ -87,6 +87,9 @@ void merge_playlists(struct spotify *spotify, char *playlist1_name, char *playli
 /////////////////////////////////////////////
 // Additional function prototypes here
 /////////////////////////////////////////////
+
+// find a playlist in the spotify system
+struct playlist *find_playlist(char *playlist_name, struct spotify *spotify);
 
 /////////////////////////////////////////////
 // Provided helper functions
